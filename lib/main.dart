@@ -28,13 +28,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  List<String> titleList = ['Amazon', '楽天', 'Yahoo!'];
 
   @override
   Widget build(BuildContext context) {
@@ -46,25 +40,20 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           ListTile( //リストの1項目を表示するためのウィジェット
             leading: Icon(Icons.security), //leading->左端に何を表示するかを決めるプロパティ
-            title: Text("Amazon"), //title->項目のタイトルを決めるプロパティ
+            title: Text(titleList[0]), //title->項目のタイトルを決めるプロパティ
           ),
           Divider(), //区切り線を表示してくれるウィジェ
           ListTile(
             leading: Icon(Icons.security),
-            title: Text("楽天"),
+            title: Text(titleList[1]),
           ),
           Divider(),
           ListTile(
             leading: Icon(Icons.security),
-            title: Text("Yahoo!"),
+            title: Text(titleList[2]),
           ),
           Divider(),
         ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
       ),
     );
   }
