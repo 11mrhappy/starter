@@ -48,14 +48,17 @@ class _MyHomePageState extends State<MyHomePage> {
             leading: Icon(Icons.security), //leading->左端に何を表示するかを決めるプロパティ
             title: Text("Amazon"), //title->項目のタイトルを決めるプロパティ
           ),
+          Divider(), //区切り線を表示してくれるウィジェ
           ListTile(
             leading: Icon(Icons.security),
             title: Text("楽天"),
           ),
+          Divider(),
           ListTile(
             leading: Icon(Icons.security),
             title: Text("Yahoo!"),
           ),
+          Divider(),
         ],
       ),
       floatingActionButton: FloatingActionButton(
