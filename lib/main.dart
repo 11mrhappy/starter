@@ -40,21 +40,23 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('パスワード管理'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
+      body: ListView( //複数のウィジェットを表示できるウィジェット・画面からはみ出たらスクロールできる
+        children: [
+          ListTile( //リストの1項目を表示するためのウィジェット
+            leading: Icon(Icons.security), //leading->左端に何を表示するかを決めるプロパティ
+            title: Text("Amazon"), //title->項目のタイトルを決めるプロパティ
+          ),
+          ListTile(
+            leading: Icon(Icons.security),
+            title: Text("楽天"),
+          ),
+          ListTile(
+            leading: Icon(Icons.security),
+            title: Text("Yahoo!"),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
