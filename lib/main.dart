@@ -50,6 +50,15 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         itemCount: titleList.length, //titleList(配列)の要素の数
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          titleList.add('Google');
+          setState(() {
+          }); //画面情報を再build
+        },
+        tooltip: 'Increment',
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
