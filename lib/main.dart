@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               ListTile( //リストの1項目を表示するためのウィジェット
                 leading: Icon(Icons.security), //leading->左端に何を表示するかを決めるプロパティ
-                title: Text(titleList[0]), //title->項目のタイトルを決めるプロパティ
+                title: Text(titleList[index]), //title->項目のタイトルを決めるプロパティ
               ),
               Divider(), //区切り線を表示してくれるウィジェ
             ],
