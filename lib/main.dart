@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   // タップした時の処理をここに記述
                   Navigator.push(
                     context, MaterialPageRoute(
-                      builder: (context) => NextPage()
+                      builder: (context) => NextPage(titleList[index]),
                     ),
                   );
                 },
