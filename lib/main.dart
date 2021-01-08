@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
           setState(() {
           }); //画面情報を再build
         },
-        tooltip: 'Increment',
+        tooltip: 'Increment', //アイコン等を長押しした際に表示されるテキストメッセージのこと
         child: Icon(Icons.add),
       ),
     );
