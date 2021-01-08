@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/next_page.dart';
+import 'package:starter/next_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   // タップした時の処理をここに記述
                   Navigator.push(
                     context, MaterialPageRoute(
-                      builder: (context) =>
+                      builder: (context) => NextPage()
                     ),
                   );
                 },
