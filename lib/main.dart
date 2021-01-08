@@ -28,7 +28,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<String> titleList = ['Amazon', '楽天', 'Yahoo!'];
+  List<String> titleList = ['Amazon', '楽天', 'Yahoo!']; //配列の作り方ー> List<型名> 名前 = [要素1, 要素2, 要素3, ..];
 
   @override
   Widget build(BuildContext context) {
