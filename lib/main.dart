@@ -36,24 +36,19 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('パスワード管理'),
       ),
-      body: ListView( //複数のウィジェットを表示できるウィジェット・画面からはみ出たらスクロールできる
-        children: [
-          ListTile( //リストの1項目を表示するためのウィジェット
-            leading: Icon(Icons.security), //leading->左端に何を表示するかを決めるプロパティ
-            title: Text(titleList[0]), //title->項目のタイトルを決めるプロパティ
-          ),
-          Divider(), //区切り線を表示してくれるウィジェ
-          ListTile(
-            leading: Icon(Icons.security),
-            title: Text(titleList[1]),
-          ),
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.security),
-            title: Text(titleList[2]),
-          ),
-          Divider(),
-        ],
+      body: ListView.builder( // .builder で繰り返しのウィジェにできる。複数のウィジェットを表示できるウィジェット・画面からはみ出たらスクロールできる
+        itemBuilder: (BuildContext context, int index) { // itemBuilder内に繰り返し処理を記述する
+          return Column( // returnで返せるウィジェは1つのみなので、DividerがDead CodeにならないようColumn Wでwrapしてる
+            children: [
+              ListTile( //リストの1項目を表示するためのウィジェット
+                leading: Icon(Icons.security), //leading->左端に何を表示するかを決めるプロパティ
+                title: Text(titleList[0]), //title->項目のタイトルを決めるプロパティ
+              ),
+              Divider(), //区切り線を表示してくれるウィジェ
+            ],
+          ); // おそらくreturnで返したウィジェットには , ではなく ; で締める？
+        },
+        itemCount: titleList.length, //titleList(配列)の要素の数
       ),
     );
   }
