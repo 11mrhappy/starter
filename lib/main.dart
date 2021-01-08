@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/next_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -43,6 +44,14 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile( //リストの1項目を表示するためのウィジェット
                 leading: Icon(Icons.security), //leading->左端に何を表示するかを決めるプロパティ
                 title: Text(titleList[index]), //title->項目のタイトルを決めるプロパティ
+                onTap: () {
+                  // タップした時の処理をここに記述
+                  Navigator.push(
+                    context, MaterialPageRoute(
+                      builder: (context) =>
+                    ),
+                  );
+                },
               ),
               Divider(), //区切り線を表示してくれるウィジェ
             ],
